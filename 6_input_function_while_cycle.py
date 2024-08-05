@@ -155,7 +155,7 @@ while True:
         break
 
 # Выводим результаты опроса
-print('\nРезультаты опроса:')
-for name, country in response.items():
-    print('Участник опроса: ' + name.title().strip()
-          + '\nЖелаемая страна для отдыха: ' + country.title().strip())
+print('\nResults:')
+for name, city in response.items():
+    print(name.title().strip() + ' dreams of going to '
+          + city.title().strip() + '!')
