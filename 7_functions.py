@@ -125,14 +125,36 @@ show_madician(magicians)
 
 #ex.8-10
 # вызов функции из функции
+
+# создаем список фокусников
+magicians = ['Anna', 'Vitaliy', 'Gennadiy', 'Julia']
 def make_great(lists):
     """добавляет к каждому имени фокусника приставку -great
         и выводит приветствие """
-    for i in range(len(magicians)):
-        magicians[i] = 'great-' + magicians[i]
+    for i in range(len(lists)):
+        lists[i] = 'Great-' + lists[i]
     show_madician(lists)
 
 make_great(magicians)
+
+#ex.8-11
+# создаем список фокусников
+magicians = ['Anna', 'Vitaliy', 'Gennadiy', 'Julia']
+def make_great_2(lists):
+    """добавляет к имени приставку Great и выводит список фокусников"""
+    for i in range(len(lists)):
+        lists[i] = 'Great-' + lists[i]
+    print(lists)
+    # возвращаем изменный список и сохраняем его в новом списке,
+    # для подтверждения, что исходный список не изменился
+    return lists
+    new_lists = lists
+    print(new_lists)
+
+# передаем функции копию списка
+make_great_2(magicians[:])
+# подтверждаем, что исходный список не изменился
+print(magicians)
 
 #ex.8-12
 # создание функции с произвольным набором аргументов
